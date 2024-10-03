@@ -31,7 +31,7 @@
 
 #c_score,#yr_score{
     /* display: flex; */
-    background-color: white;
+    background-color: white !important;
     border-radius: 1em;
     color: #656565;
     padding: 1em;
@@ -45,7 +45,7 @@
 span{
     font-size: 3rem;
     font-weight: 700;
-    background-color: transparent;
+    background-color: transparent !important;
     color: #252525;
 }
 #yr_score{
@@ -382,7 +382,6 @@ ul{
     font-weight: 600;
     font-size: large;
     background-color: transparent;
-    z-index: 1;
 }
 /*============================================================= end of results css================================================== */
 #victory_page{
@@ -477,5 +476,26 @@ ul{
 }
 
 .pic{
-    background-color: transparent;
+    background-color: transparent !important;
+    z-index: 1;
+}
+
+
+
+#themechanger{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#bgc{
+    all:unset;
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 4em;
+    height: 4em;
+}
+
+#bgc[type='color']::-webkit-color-swatch {
+    border-radius: 50%;
 }
