@@ -36,6 +36,29 @@ function homepage(){
     // console.log('its working')
 };
 
+function initScores(x=null) {
+    if (x){
+        yourScore=0;
+        pcScore=0;
+        localStorage.setItem('yourScore',yourScore);
+        localStorage.setItem('pcScore',pcScore);
+    }
+    else{
+    yourScore = parseInt(localStorage.getItem('yourScore')) || 0;
+    pcScore = parseInt(localStorage.getItem('pcScore')) || 0;
+    }
+    document.querySelector('#yr_score span').innerHTML = yourScore;
+    document.querySelector('#c_score span').innerHTML = pcScore;
+  }
+
+function changecolor(){
+    colorval=document.getElementById('bgc').value;
+    // console.log(colorval)
+    document.querySelectorAll('*').forEach(element => {
+        element.style.backgroundColor = colorval;
+      });
+}
+
 function youwin(y){
     hid('selection');
     show('next');
@@ -123,21 +146,6 @@ function getstyles(x){
         return [gimage1,gbor]
 
 };
-
-function initScores(x=null) {
-        if (x){
-            yourScore=0;
-            pcScore=0;
-            localStorage.setItem('yourScore',yourScore);
-            localStorage.setItem('pcScore',pcScore);
-        }
-        else{
-        yourScore = parseInt(localStorage.getItem('yourScore')) || 0;
-        pcScore = parseInt(localStorage.getItem('pcScore')) || 0;
-        }
-        document.querySelector('#yr_score span').innerHTML = yourScore;
-        document.querySelector('#c_score span').innerHTML = pcScore;
-      }
 
 // let a,b;
 // a=getstyles('rock')[0];
