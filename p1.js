@@ -54,8 +54,8 @@ function initScores(x=null) {
 function changecolor(){
     colorval=document.getElementById('bgc').value;
     // console.log(colorval)
-    document.querySelectorAll('*').forEach(element => {
-        element.style.backgroundColor = colorval;
+    document.querySelectorAll('*').forEach(x=> {
+        x.style.backgroundColor = colorval;
       });
 }
 
